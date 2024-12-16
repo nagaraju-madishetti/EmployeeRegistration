@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+
+       body{
+       background:url("images/picture.jpeg");
+       width:100%;
+       height:500px;
+       background-size: cover;
+       background-position:center;
+
+       }
+        a:hover{
+        background-color:red;
+        border-radius:20px;
+
+        }
+        nav{
+        opacity:0.7;
+        }
+        ul li button{
+        margin-left:50px;
+        border-radius:20px;
+        }
+h1{
+text-align:center;
+margin-top:100px;
+color:blue;
+}
+
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-primary bg-light">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">EmployeeManagement</li>
+                <li class="nav-item">
+                  <button> <a th:href="@{/newRegister}" class="nav-link active txt-white" aria-current="page"  >Register</a></button>
+                </li>
+                <li class="nav-item">
+                   <button><a th:href="@{/index}" class="nav-link active" >Employe Details</a></button>
+
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div>
+    <h1>Employee Management</h1>
+  <!--  <img src="images/picture.jpeg" alt="picture discription" width="100%" height="500px">-->
+</div>
+
+
+</body>
+</html>
