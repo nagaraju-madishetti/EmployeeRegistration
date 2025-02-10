@@ -13,9 +13,7 @@ public class InfyRegistrationApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(InfyRegistrationApplication.class, args);
-		log.info("Info level log message");
-		log.trace("Debug level log message");
-		log.error("Error level log message");
+
 	}
 
 }

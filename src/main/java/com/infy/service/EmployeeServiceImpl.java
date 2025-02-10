@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -15,17 +14,19 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> gellAllEmployees() {
+
         return employeeRepo.findAll();
     }
 
     @Override
-    public void saveEmployee(Employee employee) {
-        this.employeeRepo.save(employee);
+    public Employee saveEmployee(Employee employee) {
+       return  employeeRepo.save(employee);
 
     }
 
     @Override
-    public Employee getEmployeeById(Long id) {
+    public Employee getEmployeeById(Long id)
+    {
         return employeeRepo.findById(id).get();
     }
 
@@ -44,6 +45,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void deleteEmployeeById(long id) {
+
         this.employeeRepo.deleteById(id);
     }
 
